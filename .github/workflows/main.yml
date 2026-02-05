@@ -19,4 +19,4 @@ jobs:
         # Copy everything except .github to the server
         run: |
           ssh-keyscan -H hultin.io >> ~/.ssh/known_hosts
-          rsync -avz --delete --exclude='.github' ./ moltas@hultin.io:~/www/hultin.io/html/
+          rsync -avz --delete --exclude='.github' --exclude='.git' ./ moltas@hultin.io:~/www/hultin.io/html/
