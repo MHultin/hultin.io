@@ -1,15 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <title>404 Not found</title>
   </head>
   <style>
+    :root {
+      --color-primary: #000;
+      --color-background: #fff;
+      --color-footer: #f9f9f9;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-primary: #f9f9f9;
+        --color-background: #000;
+        --color-footer: #1a1a1a;
+      }
+    }
+
     body {
       display: flex;
       justify-content: center;
@@ -17,28 +27,28 @@
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: white;
+      background-color: var(--color-background);
       text-align: center;
     }
     h1 {
       font-size: 3rem;
-      color: black;
+      color: var(--color-primary);
     }
     p {
       font-size: 1.5rem;
-      color: black;
+      color: var(--color-primary);
     }
     a {
       padding: 0.5em 1em;
       border-radius: 5px;
       color: white;
-      background-color: #ffa719;
+      background-color: #c36157;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-decoration: none;
       font-size: larger;
     }
     a:hover {
-      background-color: #ff8c00;
+      background-color: #a36157;
       text-decoration: underline;
     }
   </style>
