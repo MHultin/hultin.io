@@ -18,4 +18,4 @@ jobs:
       - name: Deploy to Server
         # Copy everything except .github to the server
         run: |
-          scp -r --exclude=".github" ./* moltas@hultin.io:~/www/hultin.io/html/
+          rsync -avz --exclude='.github' --delete --exclude='node_modules' ./* moltas@hultin.io:~/www/hultin.io/html/
