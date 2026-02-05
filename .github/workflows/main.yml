@@ -18,4 +18,5 @@ jobs:
       - name: Deploy to Server
         # Copy everything except .github to the server
         run: |
+          ssh-keyscan -H hultin.io >> ~/.ssh/known_hosts
           rsync -avz --exclude='.github' --delete --exclude='node_modules' ./* moltas@hultin.io:~/www/hultin.io/html/
